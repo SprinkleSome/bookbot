@@ -10,3 +10,15 @@ def get_char_list(text):
         else:
             char_list[lower_case] = 1
     return char_list
+
+def frequency(the_list):
+    return the_list["num"]
+
+def sorted_list(dic):
+    new_list = []
+    for thing in dic:
+        pair = {"char": thing, "num": dic[thing]}
+        new_list.append(pair)
+        new_list.sort(reverse = True,key = frequency)
+    return new_list
+        
